@@ -10,7 +10,11 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -24,6 +28,15 @@ header{
     padding:80px 20px;
 }
 
+.profile-pic{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:4px solid #3b82f6;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+
 header h1{
     font-size:3rem;
 }
@@ -35,29 +48,34 @@ header p{
 
 .btn{
     display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
+    margin:10px;
+    padding:12px 24px;
     background:#3b82f6;
     color:white;
     text-decoration:none;
     border-radius:8px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#2563eb;
 }
 
 section{
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
     padding:60px 20px;
 }
 
 h2{
-    margin-bottom:20px;
     color:#60a5fa;
+    margin-bottom:20px;
 }
 
 .skills{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:12px;
 }
 
 .skill{
@@ -68,11 +86,27 @@ h2{
 
 .projects{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:20px;
 }
 
 .project{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.project:hover{
+    transform:translateY(-5px);
+}
+
+.project a{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+.education-box{
     background:#1e293b;
     padding:20px;
     border-radius:10px;
@@ -82,6 +116,7 @@ footer{
     text-align:center;
     padding:30px;
     background:#1e293b;
+    margin-top:40px;
 }
 </style>
 </head>
@@ -89,26 +124,73 @@ footer{
 <body>
 
 <header>
+
+    <!-- Replace image URL with your photo -->
+    <img src="https://via.placeholder.com/180" alt="Soham Dewri" class="profile-pic">
+
     <h1>Soham Dewri</h1>
-    <p>BCA Student | Aspiring Software Developer | Machine Learning Enthusiast</p>
+
+    <p>
+        BCA Student | Aspiring Software Developer |
+        Machine Learning Enthusiast
+    </p>
 
     <a href="https://github.com/SohamDewri" class="btn">GitHub</a>
+
     <a href="https://linkedin.com/in/sohamdewri" class="btn">LinkedIn</a>
+
+    <!-- Upload resume.pdf to repository and keep this -->
+    <a href="resume.pdf" class="btn">Download Resume</a>
+
 </header>
 
 <section>
+
     <h2>About Me</h2>
+
     <p>
-        I am a second-year BCA student at GGSIPU with a CGPA of 8.4.
-        Passionate about Web Development, Machine Learning, and Software Engineering.
+        I am a second-year BCA student at Guru Gobind Singh Indraprastha University (GGSIPU), Delhi.
+        I currently maintain a CGPA of <strong>8.4</strong> and have a strong interest in
+        Software Development, Machine Learning, and Web Technologies.
+
+        I enjoy building practical projects and continuously improving my technical skills.
         Currently learning React.js and Full Stack Development.
     </p>
+
 </section>
 
 <section>
+
+    <h2>Education</h2>
+
+    <div class="education-box">
+
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+
+        <p>
+            Guru Gobind Singh Indraprastha University (GGSIPU)
+        </p>
+
+        <p>2024 – 2027 | Delhi</p>
+
+        <br>
+
+        <h3>Senior Secondary (Class XII)</h3>
+
+        <p>Kendriya Vidyalaya Janakpuri</p>
+
+        <p>CBSE Board | 2024</p>
+
+    </div>
+
+</section>
+
+<section>
+
     <h2>Skills</h2>
 
     <div class="skills">
+
         <div class="skill">Python</div>
         <div class="skill">Java</div>
         <div class="skill">C</div>
@@ -119,59 +201,100 @@ footer{
         <div class="skill">MySQL</div>
         <div class="skill">Git</div>
         <div class="skill">GitHub</div>
+        <div class="skill">Machine Learning</div>
+
     </div>
+
 </section>
 
 <section>
+
     <h2>Projects</h2>
 
     <div class="projects">
 
         <div class="project">
-            <h3>Heart Disease Prediction ML</h3>
+
+            <h3>Heart Disease Prediction Using Machine Learning</h3>
+
             <p>
-                Machine Learning project using Logistic Regression,
-                Decision Tree and Random Forest classifiers.
+                Developed a machine learning model using Logistic Regression,
+                Decision Tree, and Random Forest algorithms for heart disease prediction.
             </p>
+
+            <br>
+
+            <a href="https://github.com/SohamDewri/Heart-Disease-Prediction-ML">
+                View Project →
+            </a>
+
         </div>
 
         <div class="project">
+
             <h3>Student Management System</h3>
+
             <p>
-                Python and MySQL based application with CRUD operations.
+                Developed a CRUD-based student management system using Python and MySQL.
             </p>
+
         </div>
 
         <div class="project">
+
             <h3>Palindrome Number Checker</h3>
+
             <p>
-                Python application for palindrome number detection.
+                Python application to check whether a number is a palindrome.
             </p>
+
+            <br>
+
+            <a href="https://github.com/SohamDewri/Palindrome-Number-Checker">
+                View Project →
+            </a>
+
         </div>
 
     </div>
+
 </section>
 
 <section>
+
     <h2>Certifications</h2>
 
     <ul>
-        <li>Joy of Computing using Python - NPTEL</li>
-        <li>Python for Data Science - NPTEL</li>
-        <li>Artificial Intelligence - Tech Geeks</li>
+        <li>Joy of Computing using Python – NPTEL</li>
+        <li>Python for Data Science – NPTEL</li>
+        <li>Artificial Intelligence – Tech Geeks</li>
     </ul>
+
 </section>
 
 <section>
+
     <h2>Contact</h2>
 
-    <p>Email: sohamdewri@gmail.com</p>
-    <p>Phone: +91 8178547542</p>
-    <p>Location: New Delhi, India</p>
+    <p>📧 sohamdewri@gmail.com</p>
+    <p>📱 +91 8178547542</p>
+    <p>📍 New Delhi, India</p>
+
+    <br>
+
+    <p>
+        GitHub:
+        <a href="https://github.com/SohamDewri" style="color:#60a5fa;">
+            github.com/SohamDewri
+        </a>
+    </p>
+
 </section>
 
 <footer>
-    <p>© 2026 Soham Dewri. All Rights Reserved.</p>
+
+    <p>© 2026 Soham Dewri | Portfolio Website</p>
+
 </footer>
 
 </body>
